@@ -386,6 +386,10 @@ footer {
   font-size: 0.7em;
   font-family: fuente-numero-1;
 }
+.piedepagina {
+  height: 50px;
+  background-color: rgba(0,0,0,0.9);
+}
 @-moz-keyframes fade {
   from {
     opacity: 0.4;
