@@ -1,0 +1,35 @@
+header.header
+  div.header__mobileMenu
+    div.header__mobileMenu--position
+      a(href="#" class="boton")
+        span.icon-menu
+      div(href="#" class="header__mobileMenu__language")
+        a(href="#" class="header__mobileMenu__language--spanish"): spam #{lenguage[0]}
+        a(href="#" class="header__mobileMenu__language--english"): spam #{lenguage[1]}
+  div.header__fondo    
+  div.header__logo
+  div.header__mensaje
+    h3= lema
+  div.header__desplegable#nav
+    div.header__desplegable--volver
+      a(href="#" class="boton"): span.icon-close
+    div.header__desplegable--logo
+      img(class="header__desplegable__logo--logotipo" src="./images/logo.png" alt="Logotipo de la compañia")
+    ul.header__desplegable--options
+      li(class="header__desplegable--boton1 "): a(href="#" class="") #{menu[0]}
+      li(class="header__desplegable--boton1 header__desplegable--boton2"): a(href="#" class="") #{menu[1]}
+      li(class="header__desplegable--boton1 header__desplegable--boton2"): a(href="#" class="") #{menu[2]}
+      li(class="header__desplegable--boton1 "): a(href="#" class="") #{menu[3]}
+    div.header__desplegable--socialMedia
+      a(href="#")
+        div.header__desplegable--socialMedia__facebook
+          span(class="icon-facebook-with-circle")
+      a(href="#")
+        div.header__desplegable--socialMedia__instagram
+          span(class="icon-instagram")
+      a(href="#")
+        div.header__desplegable--socialMedia__twitter
+          span(class="icon-twitter-with-circle")
+      a(href="#")
+        div.header__desplegable--socialMedia__youtube
+          span(class="icon-youtube")

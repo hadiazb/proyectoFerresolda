@@ -1,0 +1,243 @@
+// Estilos para header
+.header
+  height: 80vh;
+  position: relative;
+  &__mobileMenu 
+    mixin-container(margin-left-right)
+    position: fixed;
+    width: 92%;
+    height: 40px;
+    z-index: 10
+    background-color: transparent
+    &--position
+      width: 100%
+      height: inherit;
+      mixin-display-flex-menu(space-between, center)
+      font-size: mediun-font-size
+  &__fondo
+    height: 80vh;
+    width: 100%
+    position: absolute;
+    z-index: 0
+    background-image: url(../images/portada.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: .6
+  &__logo
+    position: absolute;
+    width: 180px
+    height: altoLogo
+    margin: 50px calc(50% - 180px / 2) 10px
+    z-index:1
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  &__mensaje
+    position: absolute;
+    width: 290px
+    margin: 0 calc(50% - 290px / 2)
+    top: 180px
+    z-index: 2
+    text-align: center;
+    font-family: fuente-numero-7
+    font-size: xd-font-size
+    color: color-claro
+    text-shadow: 1px 1px 10px color-oscuro
+  &__desplegable
+    width: 280px
+    height: 550px
+    position: absolute;
+    top: 0
+    right: 110%
+    transition: all 3s;
+    z-index: 20
+    background: rgb(150, 150, 150)
+    box-shadow: 5px 0 10px color-oscuro
+    overflow: scroll;
+    &--volver
+      height: 60px
+      mixin-container(margin-left-right)
+      mixin-display-flex-menu(flex-end, center)
+      font-size: xd-font-size
+    &--logo
+      height: 120px
+      mixin-display-flex-center(center)
+      mixin-container(margin-left-right)
+    &--options
+      height: 250px
+      mixin-container(margin-left-right)
+    &--boton1
+      height: 40px
+      margin: 25px 50px
+      line-height: 40px
+      text-align: center;
+      font-size: mediun-font-size
+      & a  
+        color: color-claro
+        font-family: fuente-numero-8
+        text-shadow: 0 0 3px color-oscuro
+    &--boton2
+      border-radius: 7px
+      background-color: rgb(46, 116, 167)
+      box-shadow: 1px 1px 3px color-oscuro
+    &--socialMedia
+      height: 80px
+      mixin-display-flex-center(center)
+      mixin-container(margin-left-right)
+
+[class^="header__desplegable--socialMedia__"]
+  height: 40px
+  width: 40px
+  margin: 5px
+  mixin-display-flex-center(center)
+  border-radius: 50%
+  font-size: xd-font-size
+  background-color: color-claro
+  color: rgb(150, 150, 150)
+  box-shadow: 1px 1px 3px color-oscuro
+
+.icon-menu
+  font-size: xd-font-size
+.icon-close
+  color: color-claro
+  text-shadow: 1px 1px 3px color-oscuro
+
+// Estilos para la sección de slides.
+.servicios
+  display: block;
+  height: 500px
+  &__head
+    mixin-container(margin-left-right)
+    text-align: center;
+    line-height: 80px
+    font-size: mediun-font-size
+    font-family: fuente-numero-9  
+  &__sliders
+    height: 480px - 80px
+    mixin-container(margin-left-right)
+    position: relative;
+
+.miSlide
+  position: relative;
+  width: 100%
+  height: 480px - 80px;
+  & img
+    width: 220px
+    height: 220px
+    margin: 0px auto 30px;
+    mixin-display-flex-center(center)
+    object-fit: cover;
+    transition: 2s;
+  & h4 
+    text-align: center;
+    margin: 10px 0 10px
+  & p
+    text-align: left;
+    font-size: .8em
+    padding: 0 20px
+    font-family: fuente-numero-1
+
+
+.direcciones
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  mixin-display-flex-menu(space-between, center)
+  font-size: 20px;
+  & a
+    border: 1px solid rgba(0, 0, 0, .5)
+    width: 25px
+    height: 25px
+    border-radius: 50%
+    mixin-display-flex-center(center)
+    color: #fff;
+    text-decoration: none;
+    font-size: .5em  
+  & a:hover 
+    background: rgba(0, 0, 0, .5);
+    transition: .5s;
+
+.barras{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom:15px;
+}
+.barra{
+  cursor: pointer;
+  height:15px;
+  width: 15px;
+  border-radius: 50%
+  border: 1px solid black
+  margin: 0 2px;
+  background: #dcdde1;
+  display: inline-block;
+  margin-left: 3px;
+}
+.active{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4;}
+  to{opacity:1;}
+}
+
+// Estilos para el footer
+
+footer
+  background-color: color-primario
+.footer
+  display: flex;
+  flex-wrap: wrap;
+  mixin-container(margin-left-right)
+  &__contacto
+    width: 280px
+    height: 220px
+    margin: 0 auto
+  &__aliados
+    width: 280px
+    height: 220px
+    margin: 0 auto
+    text-align: center
+    & h5 
+      height 40px
+      line-height: 40px
+    &--ferresolda
+      width: 100%
+      height 180px
+      mixin-display-flex-menu(space-around , center)
+      flex-wrap: wrap
+      & img 
+        width: 100px;
+
+[class^="footer__contacto__"]
+  width: 100%
+  height: 33.3%
+  display: flex;
+  align-items: center
+  font-size: mediun-font-size
+
+.contenedor__icon
+  width: 40px
+  height: 40px
+  mixin-display-flex-center(center)
+  border-radius: 50%
+  background-color: rgba(255, 255, 255, 0.5)
+  color: color-primario
+.contenedor__data
+  width: calc(100% - 40px)
+  height: 40px
+  padding: 0 40px
+  mixin-display-flex-menu(flex-stard, center)
+  font-size: small-font-size
+  font-family: fuente-numero-1

@@ -1,0 +1,23 @@
+section.servicios
+  div.servicios__head
+    h3 Nuestros Servicios 
+  div.servicios__sliders
+    div.miSlide.fade
+      img(src="./images/image.jpg" alt="imagesnes de servicios")
+      h4  #{titulos__servicios[0]}
+      p #{parrafos__servicios[0]}
+    div.miSlide.fade
+      img(src="./images/image.jpg" alt="imagesnes de servicios")
+      h4  #{titulos__servicios[1]}
+      p #{parrafos__servicios[0]}
+    div.miSlide.fade
+      img(src="./images/image.jpg" alt="imagesnes de servicios")
+      h4  #{titulos__servicios[2]}
+      p #{parrafos__servicios[0]}
+    div.direcciones
+      a(href="#" class="atras" onclick="avanzaSlide(-1)") &#10094;  
+      a(href="#" class="adelante" onclick="avanzaSlide(1)") &#10095;
+    div.barras
+      span(class="barra active" onclick="posicionSlide(1)")      
+      span(class="barra active" onclick="posicionSlide(2)")      
+      span(class="barra active" onclick="posicionSlide(3)")
